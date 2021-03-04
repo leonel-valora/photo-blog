@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: 1px solid rebeccapurple;
+}
+.post-container {
+  width: 300px;
+  padding: 1rem;
+  background-color: aliceblue;
+  margin-bottom: 1rem;
+}
+.post-title {
+  font-size: 1.2rem;
+}
