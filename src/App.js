@@ -1,7 +1,4 @@
-import logo from './logo.svg';
 import './App.css';
-import PostsGrid from './PostsGrid';
-import User from './User';
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,22 +7,26 @@ import {
   useRouteMatch,
   useParams
 } from "react-router-dom";
-import PostDetails from './PostDetails';
-import PhotosGrid from './PhotosGrid';
+import PostsGrid from './components/PostGrid';
+import PostDetails from './components/PostGrid/PostDetails'
+import PhotosGrid from './components/PhotoGrid';
+import User from './components/User';
 
 function App() {
   return (
   <Router>
     <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Posts</Link>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="container">
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <Link className="nav-link" to="/">Posts</Link>
           </li>
           <li>
-            <Link to="/photos">Photos</Link>
+            <Link className="nav-link" to="/photos">Photos</Link>
           </li>
         </ul>
+      </div>
       </nav>
 
       {/* A <Switch> looks through its children <Route>s and
@@ -48,18 +49,5 @@ function App() {
   </Router>
   );
 }
-
-function Details() {
-  return <h1>DEtails</h1>
-}
-
-function Home() {
-  return <h2>Home</h2>;
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
 
 export default App;
